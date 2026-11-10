@@ -1,0 +1,24 @@
+Device: SW2
+Collected: 20261110_093000
+============================================================
+
+===== show logging =====
+*Nov 10 09:15:22: %STP-2-TCN: Topology change detected, Received from 1 on Gi0/1
+*Nov 10 09:18:12: %OSPF-5-ADJCHG: OSPF adjacency with 10.0.0.1 on Gi0/1 changed from FULL to DOWN
+*Nov 10 09:18:15: %OSPF-5-ADJCHG: OSPF adjacency with 10.0.0.1 on Gi0/1 changed from DOWN to EXSTART
+*Nov 10 09:19:00: %IP-3-DROP: TTL expired, packet dropped, src 10.0.0.9, dst 10.0.0.5
+*Nov 10 09:20:33: %DNS-4-UNREACH: DNS server 8.8.8.8 unreachable (no response after 5s)
+
+===== show interfaces status =====
+Port    Name               Status    Vlan       Duplex  Speed
+Gi0/1  Uplink-SW1         connected  routed     a-full  1000
+Gi0/2  Server-02          connected  20         a-full  1000
+Gi0/3  Server-03          connected  20         a-full  1000
+Gi0/4  Mgmt               connected  10         a-full  1000
+
+===== show cpu =====
+CPU utilization for five seconds: 45%; one minute: 38%; five minutes: 30%
+
+===== show memory statistics =====
+Memory: 55%
+Processor: 45%   
