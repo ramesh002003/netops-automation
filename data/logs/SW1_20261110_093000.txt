@@ -1,0 +1,36 @@
+Device: SW1
+Collected: 20261110_093000
+============================================================
+
+===== show logging =====
+*Nov 10 09:15:22: %STP-2-TCN: Topology change detected, Received from 2 on Gi0/1
+*Nov 10 09:15:23: %STP-2-ROOT_CHANGE: Root changed from 32768.00:11:22:33:44:55 to 32768.00:aa:bb:cc:dd:ee
+*Nov 10 09:16:01: %PM-4-FLAPPING: MAC address 00:1a:2b:3c:4d:5e flapping between Gi0/3 and Gi0/5
+*Nov 10 09:16:02: %PM-4-FLAPPING: MAC address 00:1a:2b:3c:4d:5e flapping between Gi0/3 and Gi0/5
+*Nov 10 09:17:45: %LINEPROTO-5-UPDOWN: Line protocol on Interface Gi0/2, changed state to down
+*Nov 10 09:17:46: %LINEPROTO-5-UPDOWN: Line protocol on Interface Gi0/2, changed state to up
+*Nov 10 09:18:12: %OSPF-5-ADJCHG: OSPF adjacency with 10.0.0.2 on Gi0/1 changed from FULL to DOWN
+*Nov 10 09:18:13: %OSPF-5-ADJCHG: OSPF adjacency with 10.0.0.2 on Gi0/1 changed from DOWN to INIT
+*Nov 10 09:19:00: %IP-3-DROP: TTL expired, packet dropped, src 10.0.0.5, dst 10.0.0.9
+*Nov 10 09:19:01: %IP-3-DROP: TTL expired, packet dropped, src 10.0.0.5, dst 10.0.0.9
+*Nov 10 09:19:02: %IP-3-DROP: TTL expired, packet dropped, src 10.0.0.5, dst 10.0.0.9
+*Nov 10 09:20:33: %DNS-4-TIMEOUT: DNS query timeout for host app-server-01 (3 attempts)
+*Nov 10 09:20:34: %DNS-4-TIMEOUT: DNS query timeout for host db-primary (3 attempts)
+*Nov 10 09:21:15: %BGP-3-NOTIFICATION: BGP peer 10.0.0.10 session closed, reason: keepalive timeout
+*Nov 10 09:22:00: %STP-2-LOOP: L2 loop detected on port Gi0/4, port disabled
+
+===== show interfaces status =====
+Port    Name               Status    Vlan       Duplex  Speed
+Gi0/1  Uplink-SW2         connected  routed     a-full  1000
+Gi0/2  Server-01          connected  20         a-full  1000
+Gi0/3  User-Access-01     connected  30         a-full  100
+Gi0/4  User-Access-02     disabled   30         a-full  100
+Gi0/5  User-Access-03     connected  30         a-full  100
+Gi0/6  Mgmt               connected  10         a-full  1000
+
+===== show cpu =====
+CPU utilization for five seconds: 78%; one minute: 65%; five minutes: 52%
+
+===== show memory statistics =====
+Memory: 72%
+Processor: 78%   
