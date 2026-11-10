@@ -1,0 +1,26 @@
+version: "3.8"
+services:
+  awx:
+    image: quay.io/ansible/awx:latest
+    container_name: awx
+    ports:
+      - "8080:8080"
+    environment:
+      - AWX_ADMIN_PASSWORD=changeme123
+      - AWX_SECRET_KEY=generate-a-long-random-string-here
+    volumes:
+      - awx_data:/var/lib/awx
+      - ./playbooks:/tmp/playbooks
+    restart: unless-stopped
+  postgres:
+    image: postgres:15
+    container_name: awx_db
+    environment:
+      POSTGRES_DB: awx
+      POSTGRES_USER: awx
+      POSTGRES_PASSWORD: awxpass
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+volumes:
+  awx_data:
+  pg_data:   
