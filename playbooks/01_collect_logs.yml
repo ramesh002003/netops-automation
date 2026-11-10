@@ -1,0 +1,12 @@
+---
+- name: Collect switch logs
+  hosts: switches
+  gather_facts: false
+  tasks:
+    - name: Run log collection
+      ansible.builtin.command: python /tmp/scripts/collect_logs.py
+      register: result
+      changed_when: true
+    - name: Show output
+      debug:
+        msg: "{{ result.stdout_lines }}"   
