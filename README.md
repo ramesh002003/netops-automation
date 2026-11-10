@@ -1,4 +1,4 @@
-# netops-automation
+# NetOps Automation – Network Issue Detection & Evidence Platform
 Network issue detection (L2/L3 loop, MAC flapping, DNS, routing) with evidence using Netmiko &amp; Streamlit
 # NetOps Automation — Issue Detection & Evidence
 
